@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Hisaab</title>
+    <link rel="stylesheet" href="/create.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div>
+            <h1>Khaatabook</h1>
+        </div>
+        <div>
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisaab</a>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Create New Hisaab</h3>
+        <form action="/createhisaab" method="post">
+            <input type="text" name="title" placeholder="hisaab ka naam like 01-09-2023.txt" spellcheck="false">
+            <textarea name="details" placeholder="Daal, Aata, Cheeni" spellcheck="false"></textarea>
+            <input type="submit" value="Create New Hisaab">
+        </form>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

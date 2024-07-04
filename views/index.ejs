@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaatabook</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div>
+            <h1>Khaatabook</h1>
+        </div>
+        <div>
+            <button onclick="toggleDarkMode()">Dark Mode</button>
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisaab</a>
+        </div>
+    </div>
+    <div class="container">
+        <h3>All Hisaab Kitaab</h3>
+        <% if (files.length > 0) { %>
+            <% files.forEach(file => { %>
+                <div class="file">
+                    <span><%= file %></span>
+                    <div>
+                        <a href="/edit/<%= file%>">✏️</a>
+                        <a href="/delete/<%= file%>">🗑️</a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <h3>Currently nothing to show!</h3>
+        <% } %>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
